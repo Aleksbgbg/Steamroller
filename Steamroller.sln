@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Steamroller", "Steamroller\Steamroller.vcxproj", "{62CA4B12-9AD8-41F4-8F48-59D593B3199B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Debug|x64.ActiveCfg = Debug|x64
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Debug|x64.Build.0 = Debug|x64
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Debug|x86.ActiveCfg = Debug|Win32
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Debug|x86.Build.0 = Debug|Win32
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x64.ActiveCfg = Release|x64
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x64.Build.0 = Release|x64
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x86.ActiveCfg = Release|Win32
+		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {745938B6-7445-435C-8D21-C926095D24BD}
+	EndGlobalSection
+EndGlobal
