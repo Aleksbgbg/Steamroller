@@ -19,8 +19,15 @@ public:
 	}
 
 public:
+	int operator()(const int row, const int column) const;
+	int& operator()(const int row, const int column);
+
+public:
 	int Width() const;
 	int Height() const;
+
+private:
+	inline int FindIndex(const int row, const int column) const;
 
 private:
 	int width;
