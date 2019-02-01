@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Math\Matrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Math\Matrix.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{62CA4B12-9AD8-41F4-8F48-59D593B3199B}</ProjectGuid>
