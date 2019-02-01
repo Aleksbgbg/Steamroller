@@ -1,5 +1,6 @@
 #pragma once
 
+#include <algorithm>
 #include <vector>
 
 namespace sr
@@ -21,6 +22,8 @@ public:
 public:
 	int operator()(const int row, const int column) const;
 	int& operator()(const int row, const int column);
+
+	Matrix operator*(const Matrix& other) const;
 
 public:
 	int Width() const;
