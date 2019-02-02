@@ -9,14 +9,14 @@ class Matrix
 {
 public:
 	Matrix(const int width, const int height);
-	template<typename TIterator>
-	Matrix(const int width, const int height, TIterator begin, TIterator end)
+	template<typename TCollection>
+	Matrix(const int width, const int height, const TCollection& collection)
 		:
 		width{ width },
 		height{ height }
 	{
 		contents.resize(width * height);
-		std::copy(begin, end, contents.begin());
+		std::copy(std::begin(collection), std::end(collection), contents.begin());
 	}
 
 public:
