@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Steamroller", "Steamroller\Steamroller.vcxproj", "{62CA4B12-9AD8-41F4-8F48-59D593B3199B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Steamroller.Tests", "Steamroller.Tests\Steamroller.Tests.vcxproj", "{71566BB8-D5E1-4277-ADD3-561A8CE41C53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x64.Build.0 = Release|x64
 		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x86.ActiveCfg = Release|Win32
 		{62CA4B12-9AD8-41F4-8F48-59D593B3199B}.Release|x86.Build.0 = Release|Win32
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Debug|x64.ActiveCfg = Debug|x64
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Debug|x64.Build.0 = Debug|x64
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Debug|x86.ActiveCfg = Debug|Win32
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Debug|x86.Build.0 = Debug|Win32
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Release|x64.ActiveCfg = Release|x64
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Release|x64.Build.0 = Release|x64
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Release|x86.ActiveCfg = Release|Win32
+		{71566BB8-D5E1-4277-ADD3-561A8CE41C53}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
