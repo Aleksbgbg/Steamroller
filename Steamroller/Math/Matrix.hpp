@@ -3,14 +3,16 @@
 #include <algorithm>
 #include <vector>
 
+#include "../Types.hpp"
+
 namespace sr
 {
 class Matrix
 {
 public:
-	Matrix(const int width, const int height);
+	Matrix(const int32 width, const int32 height);
 	template<typename TCollection>
-	Matrix(const int width, const int height, const TCollection& collection)
+	Matrix(const int32 width, const int32 height, const TCollection& collection)
 		:
 		width{ width },
 		height{ height }
@@ -20,22 +22,22 @@ public:
 	}
 
 public:
-	int operator()(const int row, const int column) const;
-	int& operator()(const int row, const int column);
+	int32 operator()(const int32 row, const int32 column) const;
+	int32& operator()(const int32 row, const int32 column);
 
 	Matrix operator*(const Matrix& other) const;
 
 public:
-	int Width() const;
-	int Height() const;
+	int32 Width() const;
+	int32 Height() const;
 
 private:
-	inline int FindIndex(const int row, const int column) const;
+	inline int32 FindIndex(const int32 row, const int32 column) const;
 
 private:
-	int width;
-	int height;
+	int32 width;
+	int32 height;
 
-	std::vector<int> contents;
+	std::vector<int32> contents;
 };
 }

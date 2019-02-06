@@ -4,7 +4,7 @@
 
 namespace sr
 {
-Matrix::Matrix(const int width, const int height)
+Matrix::Matrix(const int32 width, const int32 height)
 	:
 	width{ width },
 	height{ height }
@@ -12,12 +12,12 @@ Matrix::Matrix(const int width, const int height)
 	contents.resize(width * height);
 }
 
-int Matrix::operator()(const int row, const int column) const
+int32 Matrix::operator()(const int32 row, const int32 column) const
 {
 	return contents[FindIndex(row, column)];
 }
 
-int& Matrix::operator()(const int row, const int column)
+int32& Matrix::operator()(const int32 row, const int32 column)
 {
 	return contents[FindIndex(row, column)];
 }
@@ -28,13 +28,13 @@ Matrix Matrix::operator*(const Matrix& other) const
 
 	Matrix resultant{ other.width, height };
 	
-	for (int row = 0; row < resultant.height; ++row)
+	for (int32 row = 0; row < resultant.height; ++row)
 	{
-		for (int column = 0; column < resultant.width; ++column)
+		for (int32 column = 0; column < resultant.width; ++column)
 		{
-			int value = 0;
+			int32 value = 0;
 
-			for (int index = 0; index < width; ++index)
+			for (int32 index = 0; index < width; ++index)
 			{
 				value += this->operator()(row, index) * other(index, column);
 			}
@@ -46,17 +46,17 @@ Matrix Matrix::operator*(const Matrix& other) const
 	return resultant;
 }
 
-int Matrix::Width() const
+int32 Matrix::Width() const
 {
 	return width;
 }
 
-int Matrix::Height() const
+int32 Matrix::Height() const
 {
 	return height;
 }
 
-int Matrix::FindIndex(const int row, const int column) const
+int32 Matrix::FindIndex(const int32 row, const int32 column) const
 {
 	return ((row * width) + column);
 }
