@@ -19,10 +19,19 @@
     <Filter Include="Source Files\Math">
       <UniqueIdentifier>{41a4ba91-f9fb-44ae-8da8-6e14632b790a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Memory">
+      <UniqueIdentifier>{a4125b5d-3274-444d-890e-e7e3608ee8df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{21bea32c-ec7a-439c-a931-6f0b243b20ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\Matrix.cpp">
       <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\AlignedAllocation.cpp">
+      <Filter>Source Files\Memory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="Types.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\AlignedAllocation.hpp">
+      <Filter>Header Files\Memory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
