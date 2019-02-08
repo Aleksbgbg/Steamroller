@@ -1,6 +1,7 @@
 #include "StackAllocator.hpp"
 
 #include <cstdlib>
+#include <stdexcept>
 
 sr::StackAllocator::StackAllocator()
 	:
@@ -107,6 +108,11 @@ void* sr::StackAllocator::Allocate(const Size size, const uint8 alignment) const
 	const MemoryAlignment memoryAlignment = Align(currentStackTop, alignment);
 
 	*currentAllocation += memoryAlignment.allocationAdjustment + size;
+
+	if ((*currentAllocation) > this->size)
+	{
+		throw std::overflow_error{ "StackAllocator capacity surpassed" };
+	}
 
 	return reinterpret_cast<void*>(memoryAlignment.alignedAddress);
 }

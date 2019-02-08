@@ -29,5 +29,15 @@ public:
 		Assert::AreEqual(stackAllocator0.GetMarker(), stackAllocator1.GetMarker());
 		Assert::AreEqual(stackAllocator1.GetMarker(), stackAllocator2.GetMarker());
 	}
+
+	TEST_METHOD(TestThrowsOnOverflow)
+	{
+		const sr::StackAllocator stackAllocator{ 4 };
+
+		Assert::ExpectException<std::overflow_error>([&stackAllocator]()
+		{
+			stackAllocator.Create<sr::int64>(50);
+		});
+	}
 };
 }
