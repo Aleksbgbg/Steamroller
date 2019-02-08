@@ -158,6 +158,7 @@
   <ItemGroup>
     <ClCompile Include="MatrixTests.cpp" />
     <ClCompile Include="Memory\AlignedAllocationTests.cpp" />
+    <ClCompile Include="Memory\StackAllocatorTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Steamroller\Steamroller.vcxproj">

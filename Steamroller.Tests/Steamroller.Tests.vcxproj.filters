@@ -27,5 +27,8 @@
     <ClCompile Include="Memory\AlignedAllocationTests.cpp">
       <Filter>Source Files\Memory</Filter>
     </ClCompile>
+    <ClCompile Include="Memory\StackAllocatorTests.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

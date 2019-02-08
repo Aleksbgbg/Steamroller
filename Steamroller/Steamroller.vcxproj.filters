@@ -33,6 +33,9 @@
     <ClCompile Include="Memory\AlignedAllocation.cpp">
       <Filter>Source Files\Memory</Filter>
     </ClCompile>
+    <ClCompile Include="Memory\StackAllocator.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\Matrix.hpp">
@@ -46,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="ApiDeclaration.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\StackAllocator.hpp">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\MemoryUtilities.hpp">
+      <Filter>Header Files\Memory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

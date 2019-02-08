@@ -21,11 +21,14 @@
   <ItemGroup>
     <ClCompile Include="Math\Matrix.cpp" />
     <ClCompile Include="Memory\AlignedAllocation.cpp" />
+    <ClCompile Include="Memory\StackAllocator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApiDeclaration.hpp" />
     <ClInclude Include="Math\Matrix.hpp" />
     <ClInclude Include="Memory\AlignedAllocation.hpp" />
+    <ClInclude Include="Memory\MemoryUtilities.hpp" />
+    <ClInclude Include="Memory\StackAllocator.hpp" />
     <ClInclude Include="Types.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -87,6 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);EXPORT</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -96,6 +100,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_WINDLL;%(PreprocessorDefinitions);EXPORT</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
