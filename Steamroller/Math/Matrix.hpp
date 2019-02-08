@@ -3,11 +3,12 @@
 #include <algorithm>
 #include <vector>
 
+#include "../ApiDeclaration.hpp"
 #include "../Types.hpp"
 
 namespace sr
 {
-class Matrix
+class EXPORT_API Matrix
 {
 public:
 	Matrix(const int32 width, const int32 height);

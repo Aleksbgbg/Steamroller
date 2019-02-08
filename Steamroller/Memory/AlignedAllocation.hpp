@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../ApiDeclaration.hpp"
 #include "../Types.hpp"
 
 namespace sr
@@ -10,9 +11,9 @@ struct MemoryAlignment
 	ptrdiff_t allocationAdjustment;
 };
 
-void* AllocateAligned(const Size size, const uint8 alignment);
+EXPORT_API void* AllocateAligned(const Size size, const uint8 alignment);
 
-void FreeAligned(const void* const alignedMemory);
+EXPORT_API void FreeAligned(const void* const alignedMemory);
 
 MemoryAlignment Align(const uintptr_t address, const uint8 alignment);
 

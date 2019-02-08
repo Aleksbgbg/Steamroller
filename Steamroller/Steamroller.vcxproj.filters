@@ -44,5 +44,8 @@
     <ClInclude Include="Memory\AlignedAllocation.hpp">
       <Filter>Header Files\Memory</Filter>
     </ClInclude>
+    <ClInclude Include="ApiDeclaration.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

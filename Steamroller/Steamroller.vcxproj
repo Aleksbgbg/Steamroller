@@ -23,6 +23,7 @@
     <ClCompile Include="Memory\AlignedAllocation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ApiDeclaration.hpp" />
     <ClInclude Include="Math\Matrix.hpp" />
     <ClInclude Include="Memory\AlignedAllocation.hpp" />
     <ClInclude Include="Types.hpp" />
@@ -48,7 +49,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
