@@ -10,7 +10,7 @@ struct MemoryAlignment
 	ptrdiff_t allocationAdjustment;
 };
 
-void* AllocateAligned(const uint32 size, const uint8 alignment);
+void* AllocateAligned(const Size size, const uint8 alignment);
 
 void FreeAligned(const void* const alignedMemory);
 

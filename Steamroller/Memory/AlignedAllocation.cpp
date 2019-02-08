@@ -5,7 +5,7 @@
 
 namespace sr
 {
-void* AllocateAligned(const uint32 size, const uint8 alignment)
+void* AllocateAligned(const Size size, const uint8 alignment)
 {
 	assert(0 < alignment);
 	assert(alignment <= 128);
