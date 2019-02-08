@@ -156,7 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MatrixTests.cpp" />
+    <ClCompile Include="Math\MatrixTests.cpp" />
     <ClCompile Include="Memory\AlignedAllocationTests.cpp" />
     <ClCompile Include="Memory\StackAllocatorTests.cpp" />
   </ItemGroup>

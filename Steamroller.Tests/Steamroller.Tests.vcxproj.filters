@@ -21,14 +21,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MatrixTests.cpp">
-      <Filter>Source Files\Math</Filter>
-    </ClCompile>
     <ClCompile Include="Memory\AlignedAllocationTests.cpp">
       <Filter>Source Files\Memory</Filter>
     </ClCompile>
     <ClCompile Include="Memory\StackAllocatorTests.cpp">
       <Filter>Source Files\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\MatrixTests.cpp">
+      <Filter>Source Files\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
