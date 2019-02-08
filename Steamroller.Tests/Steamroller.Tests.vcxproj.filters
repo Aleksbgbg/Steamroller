@@ -16,10 +16,16 @@
     <Filter Include="Source Files\Math">
       <UniqueIdentifier>{73ae5255-741e-41ed-82dc-9d296cd6eef0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{7ae67e85-e8c2-4a29-804a-dabda3625224}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MatrixTests.cpp">
       <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\AlignedAllocationTests.cpp">
+      <Filter>Source Files\Memory</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
