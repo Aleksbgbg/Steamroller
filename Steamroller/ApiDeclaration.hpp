@@ -2,7 +2,7 @@
 
 #if defined(IN_ENGINE) || defined(IN_TEST)
 #define EXPORT_API
-#define EXPORT_API_INTERNAL_ONLY
+#define EXPORT_API_NO_IMPORT
 #else
 #ifdef EXPORT
 #define EXPORT_API __declspec(dllexport)
