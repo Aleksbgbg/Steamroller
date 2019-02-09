@@ -6,7 +6,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace SteamrollerTests
 {
-TEST_CLASS(AlignedAllocationTests)
+TEST_CLASS(StackAllocatorTests)
 {
 public:
 	TEST_METHOD(TestAllocatesCorrectly)
