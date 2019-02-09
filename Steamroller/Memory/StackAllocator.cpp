@@ -3,7 +3,9 @@
 #include <cstdlib>
 #include <stdexcept>
 
-sr::StackAllocator::StackAllocator()
+namespace sr
+{
+StackAllocator::StackAllocator()
 	:
 	size{ 0 },
 	memory{ nullptr },
@@ -13,7 +15,7 @@ sr::StackAllocator::StackAllocator()
 {
 }
 
-sr::StackAllocator::StackAllocator(const Size size)
+StackAllocator::StackAllocator(const Size size)
 	:
 	size{ size },
 	memory{ malloc(size + MemoryGap) },
@@ -24,7 +26,7 @@ sr::StackAllocator::StackAllocator(const Size size)
 	*currentAllocation = 0;
 }
 
-sr::StackAllocator::StackAllocator(const StackAllocator& source)
+StackAllocator::StackAllocator(const StackAllocator& source)
 	:
 	size{ source.size },
 	memory{ source.memory },
@@ -35,7 +37,7 @@ sr::StackAllocator::StackAllocator(const StackAllocator& source)
 	++(*copies);
 }
 
-sr::StackAllocator::StackAllocator(StackAllocator&& source) noexcept
+StackAllocator::StackAllocator(StackAllocator&& source) noexcept
 	:
 	size{ source.size },
 	memory{ source.memory },
@@ -50,7 +52,7 @@ sr::StackAllocator::StackAllocator(StackAllocator&& source) noexcept
 	source.copies = nullptr;
 }
 
-sr::StackAllocator::~StackAllocator()
+StackAllocator::~StackAllocator()
 {
 	--(*copies);
 
@@ -60,7 +62,7 @@ sr::StackAllocator::~StackAllocator()
 	}
 }
 
-sr::StackAllocator& sr::StackAllocator::operator=(const StackAllocator& source)
+StackAllocator& StackAllocator::operator=(const StackAllocator& source)
 {
 	if (this != &source)
 	{
@@ -76,7 +78,7 @@ sr::StackAllocator& sr::StackAllocator::operator=(const StackAllocator& source)
 	return *this;
 }
 
-sr::StackAllocator& sr::StackAllocator::operator=(StackAllocator&& source) noexcept
+StackAllocator& StackAllocator::operator=(StackAllocator&& source) noexcept
 {
 	if (this != &source)
 	{
@@ -96,12 +98,12 @@ sr::StackAllocator& sr::StackAllocator::operator=(StackAllocator&& source) noexc
 	return *this;
 }
 
-sr::StackAllocator::Marker sr::StackAllocator::GetMarker() const
+StackAllocator::Marker StackAllocator::GetMarker() const
 {
 	return *currentAllocation;
 }
 
-void* sr::StackAllocator::Allocate(const Size size, const uint8 alignment) const
+void* StackAllocator::Allocate(const Size size, const uint8 alignment) const
 {
 	const uintptr_t currentStackTop = memoryAddress + MemoryGap + *currentAllocation;
 
@@ -117,12 +119,13 @@ void* sr::StackAllocator::Allocate(const Size size, const uint8 alignment) const
 	return reinterpret_cast<void*>(memoryAlignment.alignedAddress);
 }
 
-void sr::StackAllocator::Deallocate(const Marker marker) const
+void StackAllocator::Deallocate(const Marker marker) const
 {
 	*currentAllocation = marker;
 }
 
-void sr::StackAllocator::Clear() const
+void StackAllocator::Clear() const
 {
 	*currentAllocation = 0;
+}
 }
